@@ -1,8 +1,8 @@
-import styles from "./AboutMe.module.css";
+import "./AboutMe.css";
 
 export default function AboutMe() {
   return (
-   <section className={styles.aboutMe}>
+   <section className="aboutMe">
       <h2>About Me</h2>
       <p>
         I am a dedicated software developer with a passion for building
