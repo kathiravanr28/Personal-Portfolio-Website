@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <Navbar />
-      <Home />
       <AboutMe />
+      <Home />
       <Projects />
       <Contact />
     </>

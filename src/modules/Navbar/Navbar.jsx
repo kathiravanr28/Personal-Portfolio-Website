@@ -5,7 +5,7 @@ export default function Navbar() {
     <div id="header">
       <div className="container">
           <nav>
-            <img src="src/assets/background.jpg" className="background" />
+            <img src="src/assets/profile-pic.jpg" className="profile-pic" />
             <img src="src/assets/myname.jpeg" className="logo" />
             <ul>
               <li><a href="#home">Home</a></li>
@@ -16,9 +16,8 @@ export default function Navbar() {
             </ul>
           </nav>
           <div className="header-text">
-
-              <p>SoftWare Engineer</p>
-              <h1>Hi, I'm Kathiravan </h1>
+              <p>Software Engineer</p>
+              <h1>Hi, I'm <span>Kathiravan</span></h1>
           </div>
       </div>
     </div>
