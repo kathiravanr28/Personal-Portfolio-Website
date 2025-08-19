@@ -4,6 +4,8 @@ import Home from './modules/Home/Home';
 import AboutMe from './modules/AboutMe/AboutMe';
 import Projects from './modules/Projects/Projects';
 import Contact from './modules/Contact/Contact';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function App() {
   return (
