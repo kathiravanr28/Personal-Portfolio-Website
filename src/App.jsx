@@ -12,8 +12,8 @@ function App() {
   return (
     <>
       <Navbar />
-      <AboutMe />
       <Home />
+      <AboutMe />
       <Projects />
       <Certificates />
       <Contact />
