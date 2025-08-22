@@ -1,49 +1,4 @@
-#projects{
-    padding: 30px 0;
-}
-.services-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-.services-list div{
-    background:  #aeb1b6;
-    padding: 30px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 10px;
-    transition: all 0.4s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-.services-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-.services-list div h2{
-    font-size: 30px;
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-.services-list div a{
-    text-decoration: none;
-    color: white;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
-.services-list div:hover {
-    background: #ff004f;
-    transform: translateY(-12px) scale(1.05);
-    box-shadow: 0 0 25px rgba(255, 0, 79, 0.8);
-}
-.services-list div:hover h2,
-.services-list div:hover p,
-.services-list div:hover a,
-.services-list div:hover i {
-    transform: perspective(600px) translateZ(30px);
-    transition: transform 0.4s ease;
-}
+
 /* for slider purpose*/
 .project-slider {
   padding: 40px 0;
@@ -71,6 +26,11 @@
   margin: auto;
   margin-top: 20px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  color: #fff;
+
 }
 .project-card:hover {
   background: #ff004f;
@@ -88,6 +48,46 @@
   font-size: 14px;
   margin-bottom: 20px;
   line-height: 1.5;
+}
+
+/* Front (Image layer) */
+.project-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  z-index: 2;
+}
+
+.project-front img {
+  width: 100%;
+  height: 100%;
+}
+
+/* contentDetails layer */
+.project-back {
+  position: absolute;
+  padding: 20px;
+  width: 74%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover effect → Slide UP */
+.project-card:hover .project-front {
+  transform: translateY(-100%);
+}
+
+.project-card:hover .project-back {
+  opacity: 1;
 }
 
 /* buttons */
