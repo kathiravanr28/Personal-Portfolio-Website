@@ -1,13 +1,15 @@
-.aboutMe{
+#aboutMe{
     color: #ababab;
     padding: 80px 0;
 }
+/* About Me Section */
 .row{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: flex-start;
 }
+/* About Me Image */
 .about-col-1{
     flex-basis: 35%;
 }
@@ -15,6 +17,7 @@
     width: 100%;
     border-radius: 15px;
 }
+/* About Me Content */
 .about-col-2{
     flex-basis: 60%;
     margin-top: -45px;
@@ -28,6 +31,7 @@
     display: flex;
     margin: 20px 0 40px;
 }
+/* Tab Links with transition */
 .tab-links{
     margin-right: 50px;
     font-size: 18px;
@@ -57,6 +61,7 @@
     color: #b54769;
     font-size: 14px;
 }
+/* Tab Contents with Animation/transitions */
 .tab-contents{
     display: none;
 }
@@ -67,3 +72,122 @@
   font-weight: bold;
   color:  #ff004f;
 }
+
+/* small mobiles */
+/* Small Mobile  */
+@media (min-width: 320px) and (max-width: 480px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+    margin: 0;
+  }
+
+  .about-col-1 img {
+    max-width: 220px;
+    margin-bottom: 20px;
+  }
+
+  .about-col-2 p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .sub-title {
+    font-size: 26px;
+  }
+
+  .tab-titles {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tab-links {
+    font-size: 14px;
+    margin-right: 0;
+  }
+
+  .tab-contents ul li span {
+    font-size: 12px;
+  }
+}
+
+/* Mobile Portrait/Landscape */
+@media (min-width: 481px) and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-col-1 img {
+    max-width: 280px;
+    margin-bottom: 25px;
+  }
+
+  .about-col-2 {
+    margin-top: 0;
+  }
+
+  .sub-title {
+    font-size: 34px;
+  }
+
+  .tab-titles {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .tab-links {
+    font-size: 16px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-col-1 {
+    flex-basis: 40%;
+  }
+
+  .about-col-2 {
+    flex-basis: 55%;
+  }
+
+  .sub-title {
+    font-size: 42px;
+  }
+
+  .tab-links {
+    margin-right: 30px;
+    font-size: 16px;
+  }
+}
+
+/* Small Laptop */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .sub-title {
+    font-size: 50px;
+  }
+
+  .tab-links {
+    font-size: 17px;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1201px) {
+  .sub-title {
+    font-size: 60px;
+  }
+
+  .tab-links {
+    font-size: 18px;
+  }
+}
+
+

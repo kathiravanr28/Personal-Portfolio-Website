@@ -1,3 +1,4 @@
+/* Contact left section  */
 .contact-left{
     flex-basis: 35%;
 }
@@ -12,6 +13,7 @@
     margin-right: 15px;
     font-size: 25px;
 }
+/* Social Media Links and icons */
 .social-icons {
     margin-top: 30px;
 }
@@ -27,7 +29,7 @@
     color: #ff004f;
     transform: translateY(-5px);
 }
-
+/* Download CV link */
 .download-cv {
     display: block;
     margin-top: 30px;
@@ -39,6 +41,7 @@
     border-radius: 5px;
     width: fit-content;
 }
+/* Contact right section */
 .contact-right{
     margin-top: 30px;
 }
@@ -57,10 +60,10 @@ form input, form textarea{
     border-radius: 6px;
 
 }
-
+/* Contact right submit section  */
 
 .submit {
-    margin-top: 20px;
+    margin-top: 9px;
     padding: 10px 20px;
     background-color: #ff004f;
     color: white;
@@ -74,11 +77,97 @@ form input, form textarea{
     color: rgb(239, 4, 4);
     transition: background-color 0.3s;
 }
+/* Copyright Section */
 .copyright{
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #262626;
     font-weight: 300;
-    margin-top: 20px;
+    margin-top: 50px;
+}
+
+/* css for small screen */
+/* Mobile*/
+@media only screen and (max-width: 600px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+    .contact-left {
+        margin-bottom: 50px;
+        text-align: center;
+
+    }
+    .contact-left p {
+        margin-top: 15px;
+    }
+    .social-icons a {
+        font-size: 25px;
+        margin-right: 10px;
+    }
+    .download-cv {
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Small tablets */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+     .contact-container {
+        flex-direction: column;
+    }
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+    .contact-left {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .contact-left p {
+        margin-top: 15px;
+    }
+    .social-icons a {
+        font-size: 25px;
+        margin-right: 10px;
+    }
+    .download-cv {
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Large tablets */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+    .contact-left {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .contact-left p {
+        margin-top: 15px;
+    }
+    .social-icons a {
+        font-size: 25px;
+        margin-right: 10px;
+    }
+    .download-cv {
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
 }

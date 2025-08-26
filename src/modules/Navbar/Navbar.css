@@ -1,39 +1,21 @@
-#header{
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
+#header {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
 }
-.container{
-    padding: 10px 10%;
+/* Container */
+.container {
+  padding: 10px 10%;
+  display: flex;
+  flex-direction: column;
 }
 
+/* navigation links */
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-}
-
-.logo{
-    width: 140px;
-}
-
-.profile-pic {
-    position: absolute;
-    opacity: 0.9;
-    margin-left: 50%;
-    margin-top: 38%;
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid transparent; /* needed for hover effect */
-    transition: all 0.3s ease-in-out;
-}
-
-.profile-pic:hover {
-  border-color: #ff004f; /* highlight border */
-  box-shadow: 0 0 20px rgba(255, 0, 79, 0.6); /* glow effect */
 }
 
 nav ul li{
@@ -48,7 +30,7 @@ nav ul li a{
     font-size: 18px;
     position: relative;
 }
-
+/* Navigation underline effect */
 nav ul li a::after{
     content: '';
     width: 0;
@@ -61,15 +43,337 @@ nav ul li a::after{
 }
 nav ul li a:hover::after{
     width: 100%;
+    font-family: monospace;
 }
+
+.logo {
+  width: 140px;
+}
+
+/* Content Row for differnt screen size */
+.content-row {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 5%;
+}
+
+/* header text */
 .header-text {
-    margin-top: 20%;
-    font-size: 30px;
+  font-size: 30px;
+  color: white;
 }
-.header-text h1{
-    font-size: 60px;
+.header-text h1 {
+  font-size: 60px;
+  margin-top: 100px;
+
+}
+.header-text h1 span {
+  color: #ff004f;
+}
+
+/* profile picture */
+.profile-pic {
+  height: 300px;
+  width: 300px;
+  margin-top: 90px;
+  margin-right: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid transparent;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: profileAppear 1.5s ease forwards;
+  animation-delay: 0.2s;
+}
+.profile-pic:hover {
+  border-color: #ff004f;
+  box-shadow: 0 0 20px rgba(255, 0, 79, 0.6);
+}
+/* Keyframes for profile picture appearance */
+@keyframes profileAppear {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Typing Animations */
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #ff004f;
+  opacity: 0;
+}
+.typing-1 {
+  width: 0;
+  animation: typing1 3s steps(20, end) forwards, blink 0.7s step-end infinite;
+   animation-delay: 1.7s;
+  opacity: 1;
+}
+.typing-2 {
+  width: 0;
+  opacity: 0;
+  animation: typing2 3s steps(20, end) forwards, blink 0.7s step-end infinite;
+  animation-delay: 5s;
+}
+@keyframes typing1 {
+  from { width: 0 }
+  to { width: 18ch }
+}
+@keyframes typing2 {
+  from { width: 0; opacity: 1 }
+  to { width: 18ch; opacity: 1 }
+}
+@keyframes blink {
+  50% { border-color: transparent }
+}
+.typing.finished {
+  border-right: none;
+}
+nav .fa-solid{
+  display: none;
+}
+/* Small phones */
+/* Mobile */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    z-index: 1;
+  }
+  .logo {
+    height: 40px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 20px;
+    z-index: 10;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  .header-text h1 {
+    font-size: 22px;
+  }
+  .header-text p {
+    font-size: 14px;
+  }
+  .header-text{
+    z-index: 1;
+
+  }
+  #sidemenu {
+  background: #ff004f;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: 170px;
+  width: 200px;
+  height: 100vh;
+  padding-top: 5px;
+  z-index: 2;
+  box-sizing: border-box;
+}
+#sidemenu {
+  right: -240px;  /* hide offscreen */
+  transition: right 0.3s ease;
+}
+
+/* When menu is open */
+#sidemenu.open {
+  right: -20px; /* slide into view */
+}
+
+   nav .fa-solid {
+    display: block;
+    font-size: 25px;
+  }
+   nav ul li{
+    text-align: left;
+    display: block;
     margin-top: 20px;
+    margin: 40px 0px 40px -5px;
 }
-.header-text h1 span{
-    color: #ff004f;
+  nav ul .fa-solid{
+    position: absolute;
+    cursor: pointer;
+    left: 60px;
+  }
+}
+
+/* Mobile Landscape / Small Tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-pic {
+    width: 190px;
+    height: 190px;
+  }
+  .logo {
+    height: 45px;
+    margin-bottom: 15px;
+  }
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  .header-text h1 {
+    font-size: 40px;
+  }
+  .header-text p {
+    font-size: 30px;
+  }
+   #sidemenu {
+  background: #ff004f;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: 170px;
+  width: 40vw;
+  height: 102.2vh;
+  padding-top: 5px;
+  z-index: 2;
+  box-sizing: border-box;
+}
+#sidemenu {
+  right: -320px;
+  transition: right 0.3s ease;
+}
+
+/* When menu is open */
+#sidemenu.open {
+  right: -20px;
+}
+
+   nav .fa-solid {
+    display: block;
+    font-size: 25px;
+  }
+   nav ul li{
+    text-align: left;
+    display: block;
+    margin-top: 20px;
+    margin: 40px 0px 40px -5px;
+}
+  nav ul .fa-solid{
+    position: absolute;
+    cursor: pointer;
+    left: 60px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1020px) {
+    nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-pic {
+    width: 190px;
+    height: 190px;
+  }
+  .logo {
+    height: 45px;
+    margin-bottom: 15px;
+  }
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  .header-text h1 {
+    font-size: 40px;
+  }
+  .header-text p {
+    font-size: 30px;
+  }
+   #sidemenu {
+  background: #ff004f;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: 170px;
+  width: 300px;
+  height: 100vh;
+  padding-top: 5px;
+  z-index: 2;
+  box-sizing: border-box;
+}
+#sidemenu {
+  right: -300px;
+  transition: right 0.3s ease;
+}
+
+/* When menu is open */
+#sidemenu.open {
+  right: -20px;
+}
+
+   nav .fa-solid {
+    display: block;
+    font-size: 25px;
+  }
+   nav ul li{
+    text-align: left;
+    display: block;
+    margin-top: 20px;
+    margin: 40px 0px 40px -5px;
+}
+  nav ul .fa-solid{
+    position: absolute;
+    cursor: pointer;
+    left: 60px;
+  }
+}
+
+/* Small Laptops*/
+@media (min-width: 1025px) and (max-width: 1200px) {
+  nav ul {
+    gap: 28px;
+  }
+  .header-text h1 {
+    font-size: 38px;
+  }
+  .header-text p {
+    font-size: 18px;
+  }
+}
+
+/* Large Screens (1201px and up) */
+@media (min-width: 1201px) {
+  nav ul {
+    gap: 35px;
+  }
+  nav ul li a {
+    font-size: 18px;
+  }
+  .header-text h1 {
+    font-size: 44px;
+  }
+  .header-text p {
+    font-size: 20px;
+  }
+
 }

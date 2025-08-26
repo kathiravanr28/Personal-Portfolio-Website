@@ -1,4 +1,8 @@
 
+#projects{
+  padding: 20px 0;
+  background: #020000;
+}
 /* for slider purpose*/
 .project-slider {
   padding: 40px 0;

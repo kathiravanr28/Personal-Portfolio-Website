@@ -2,3 +2,10 @@ body {
     background-color: black;
     color: white;
 }
+#home,
+#aboutMe,
+#projects,
+#certificates,
+#contact {
+  scroll-margin-top: 100px; /* adjust to your navbar height */
+}

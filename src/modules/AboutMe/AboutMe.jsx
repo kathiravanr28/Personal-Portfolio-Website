@@ -2,13 +2,15 @@ import "./AboutMe.css";
 import { opentab } from "./AboutMe-function.js";
 export default function AboutMe() {
   return (
-   <section className="aboutMe">
+   <section id="aboutMe">
     <div className="container">
       <div className="row">
         <div className="about-col-1">
+          {/* Profile Picture */}
           <img src="src/assets/aboutMe-pic.png" alt="My Name" className="about-image" />
         </div>
         <div className="about-col-2">
+          {/* About Me Section */}
           <h1 className="sub-title">About Me</h1>
           <p>
             I am a passionate Computer Science graduate (B.Tech) from Rajiv Gandhi College of Engineering and Technology
