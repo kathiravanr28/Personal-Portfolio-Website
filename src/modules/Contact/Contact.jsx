@@ -1,5 +1,18 @@
 import "./Contact.css";
+import { submitToGoogleSheet } from "./Contact.js";
+import React, { useRef, useState } from "react";
+import "./Contact.css";
 export default function Contact() {
+  const formRef = useRef(null);
+  const [message, setMessage] = useState("");
+  const scriptURL =
+  "https://script.google.com/macros/s/AKfycbzhNiW_QWhogYnFMZ8fis8kZVcfVyu275YiKsMKQK72TSokKWOvQkbP15PFJtwrUWIyaQ/exec";
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    submitToGoogleSheet(formRef, setMessage, scriptURL);
+  };
+
   return (
    <div id="contact">
     <div className="container">
@@ -12,20 +25,22 @@ export default function Contact() {
           <p><i className="fa-solid fa-phone"></i>+91 7812801558</p>
           <div className="social-icons">
             {/* Social Media Links */}
-            <a href=""><i className="fa-brands fa-instagram"></i></a>
-            <a href=""><i className="fa-brands fa-twitter"></i></a>
-            <a href=""><i className="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/stylish_dude_16/"><i className="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/KATHIRA72419023"><i className="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/kathiravan-r-887723370/"><i className="fa-brands fa-linkedin"></i></a>
           </div>
           {/* Download CV link */}
           <a href="/my-cv.pdf" download className="download-cv">Download CV</a>
+          <a href="/my-cv.pdf" className="cv-link"><i className="fa-solid fa-up-right-from-square"></i></a>
         </div>
         <div className="contact-right">
           {/* Contact Form */}
-          <form>
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required/>
-            <textarea name="message" rows={6} placeholder="Your Message"></textarea>
+          <form ref={formRef} onSubmit={handleSubmit} name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required />
+            <input type="email" name="Mail" placeholder="Your Email" required />
+            <textarea name="Message" rows={6} placeholder="Your Message"></textarea>
             <button type="submit" className="submit">Send Message</button>
+            <span id="msg" className={message === "Something went wrong!" ? "error" : ""}>{message}</span>
           </form>
         </div>
       </div>
@@ -35,5 +50,6 @@ export default function Contact() {
       </div>
     </div>
    </div>
+
   );
 }

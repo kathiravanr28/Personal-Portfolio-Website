@@ -16,7 +16,7 @@ export default function Certificates() {
                 <h3>Java Developer Intern</h3>
                 <p>You can see the Completion certification by clicking the link below</p>
                 {/* Certificate 1 link */}
-                <a href=""><i className="fa-solid fa-up-right-from-square"></i></a>
+                <a href="/Internship Completion Letter - KATHIRAVAN R - B10571.pdf"><i className="fa-solid fa-up-right-from-square"></i></a>
               </div>
           </div>
           <div className="certificate">

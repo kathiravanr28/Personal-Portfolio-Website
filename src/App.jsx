@@ -4,7 +4,7 @@ import Home from './modules/Home/Home';
 import AboutMe from './modules/AboutMe/AboutMe';
 import Projects from './modules/Projects/Projects';
 import Certificates from './modules/Certificates/Certificates';
-import Contact from './modules/Contact/Contact';
+import Contact from './modules/Contact/Contact.jsx';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useRef } from 'react';
 
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-     <Navbar scrollToSection={scrollToSection} refs={{ aboutRef, projectsRef, certificatesRef, contactRef }} />
+      <Navbar scrollToSection={scrollToSection} refs={{ aboutRef, projectsRef, certificatesRef, contactRef }} />
       <div><Home /></div>
       <div ref={aboutRef}><AboutMe /></div>
       <div ref={projectsRef}><Projects /></div>
