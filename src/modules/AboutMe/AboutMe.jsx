@@ -1,6 +1,6 @@
 import "./AboutMe.css";
 import { opentab } from "./AboutMe-function.js";
-export default function AboutMe() {
+export default function AboutMe({active}) {
   return (
    <section id="aboutMe">
     <div className="container">
@@ -11,7 +11,7 @@ export default function AboutMe() {
         </div>
         <div className="about-col-2">
           {/* About Me Section */}
-          <h1 className="sub-title">About Me</h1>
+          <h1 className={`sub-title ${active ? "active-subtitle" : ""}`}>About Me</h1>
           <p>
             I am a passionate Computer Science graduate (B.Tech) from Rajiv Gandhi College of Engineering and Technology
             with strong skills in Java, React, Spring Boot, Microservices, RESTful APIs, and MySQL. I enjoy building scalable,

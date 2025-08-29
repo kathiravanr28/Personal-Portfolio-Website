@@ -27,6 +27,12 @@
     font-weight:600;
     color:#fff;
 }
+/* Active Subtitle style when navigating */
+.active-subtitle {
+  color: red;
+  text-decoration: underline;
+  transition: 0.3s ease-in-out;
+}
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;

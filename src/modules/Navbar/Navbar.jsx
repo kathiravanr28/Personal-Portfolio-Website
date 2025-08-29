@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import { useHeaderText } from "./Navbar-function";
-export default function Navbar({ scrollToSection, refs }) {
+export default function Navbar({ scrollToSection, refs , activeSection }) {
   // used for the side menu
   const { aboutRef, projectsRef, certificatesRef, contactRef } = refs;
   // used for the header text to open and close
@@ -14,11 +14,16 @@ export default function Navbar({ scrollToSection, refs }) {
           {/* the side menu use for navigation of different sections */}
           <ul id="sidemenu" className={`${isOpen ? "open" : ""}`}>
             {/* use onClick to navigate */}
-            <li><a onClick={() => window.location.reload()}>Home</a></li>
-            <li><a onClick={() => scrollToSection(aboutRef)}>About Me</a></li>
-            <li><a onClick={() => scrollToSection(projectsRef)}>Projects</a></li>
-            <li><a onClick={() => scrollToSection(certificatesRef)}>Certificates</a></li>
-            <li><a onClick={() => scrollToSection(contactRef)}>Contact Me</a></li>
+            <li><a  className={activeSection === "home" ? "active" : ""}
+            onClick={() => window.location.reload()}>Home</a></li>
+            <li><a  className={activeSection === "about" ? "active" : ""}
+            onClick={() => scrollToSection(aboutRef)}>About Me</a></li>
+            <li><a  className={activeSection === "projects" ? "active" : ""}
+            onClick={() => scrollToSection(projectsRef)}>Projects</a></li>
+            <li><a  className={activeSection === "certificates" ? "active" : ""}
+            onClick={() => scrollToSection(certificatesRef)}>Certificates</a></li>
+            <li><a  className={activeSection === "contact" ? "active" : ""}
+            onClick={() => scrollToSection(contactRef)}>Contact Me</a></li>
             <i className="fa-solid fa-square-xmark" onClick={closeMenu}></i>
           </ul>
           {/* hamburger menu icon */}

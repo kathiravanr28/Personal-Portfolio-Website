@@ -9,6 +9,7 @@
   width: 100%;
 }
 
+/* Swiper Slide */
 .swiper-slide {
   display: flex;
   justify-content: center;
@@ -119,4 +120,10 @@
   color: #ff004f;
   transform: scale(1.05);
   box-shadow: 0 0 12px rgba(255,0,79,0.6);
+}
+/* Active Subtitle style when navigating */
+.active-subtitle {
+  color: red;
+  text-decoration: underline;
+  transition: 0.3s ease-in-out;
 }

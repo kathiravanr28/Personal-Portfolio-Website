@@ -1,13 +1,13 @@
 
 #certificates {
-  padding: 50px 0;
+  padding: 40px 0;
 }
 /* Certificate List */
 .certificate-list{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 40px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .certificate{
@@ -64,4 +64,10 @@
     height: 100%;
     transition: height 0.5s;
 
+}
+/* Active Subtitle style when navigating */
+.active-subtitle {
+  color: red;
+  text-decoration: underline;
+  transition: 0.3s ease-in-out;
 }

@@ -10,12 +10,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 
-export default function Projects() {
+export default function Projects({ active }) {
   return (
     <div id="projects">
       <div className="container">
         {/* Projects Section */}
-        <h1 className="sub-title">My Projects</h1>
+        <h1 className={`sub-title ${active ? "active-subtitle" : ""}`}>My Projects</h1>
         {/* Swiper used for contents to slide */}
         <Swiper
           spaceBetween={20} slidesPerView={3}  navigation={true}
@@ -83,7 +83,7 @@ export default function Projects() {
                    Implemented smooth transitions, navigation controls, and an automatic slideshow feature.
                    Focused on creating an intuitive user experience with clean design and interactive functionality.</p>
                 <div className="project-buttons">
-                  <a href="slider-doc.pdf" target="_blank" className="btn">View Document</a>
+                  <a href="/Image Slider.pdf" target="_blank" className="btn">View Document</a>
                   {/* <a href="https://youtu.be/demo3" target="_blank" className="btn">Watch Demo</a> in future */}
                 </div>
               </div>
@@ -103,7 +103,7 @@ export default function Projects() {
                   Implemented responsive design, smooth navigation, hover effects, and interactive elements to enhance user experience.
                   Included a downloadable resume for recruiters and visitors.</p>
                 <div className="project-buttons">
-                  <a href="portfolio-doc.pdf" target="_blank" className="btn">View Document</a>
+                  <a href="/Personal Portfolio Website.pdf" target="_blank" className="btn">View Document</a>
                   {/* <a href="https://youtu.be/demo4" target="_blank" className="btn">Watch Demo</a> in future */}
                 </div>
               </div>

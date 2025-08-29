@@ -2,11 +2,11 @@ import "./Certificates.css"
 import certificate1 from "../../assets/certificate-pic.png";
 import certificate2 from "../../assets/certificate-pic2.png";
 
-export default function Certificates() {
+export default function Certificates({active}) {
   return (
     <div id="certificates">
       <div className="container">
-        <h1 className="sub-title">Certificates</h1>
+        <h1 className={`sub-title ${active ? "active-subtitle" : ""}`}>Certificates</h1>
         <div className="certificate-list">
           <div className="certificate">
             {/* Certificate 1 image */}

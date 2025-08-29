@@ -1,8 +1,8 @@
 import "./Contact.css";
-import { submitToGoogleSheet } from "./Contact.js";
+import { submitToGoogleSheet } from "./Contact-function.js";
 import React, { useRef, useState } from "react";
 import "./Contact.css";
-export default function Contact() {
+export default function Contact({active}) {
   const formRef = useRef(null);
   const [message, setMessage] = useState("");
   const scriptURL =
@@ -19,7 +19,7 @@ export default function Contact() {
       <div className="row">
         <div className="contact-left">
           {/* Contact Information */}
-          <h1 className="sub-title">Contact Me</h1>
+          <h1  className={`subtitle ${active ? "active-subtitle" : ""}`}>Contact Me</h1>
           {/* Email and phone number */}
           <p><i className="fa-solid fa-paper-plane"></i>kathiravanr280303@gmail.com</p>
           <p><i className="fa-solid fa-phone"></i>+91 7812801558</p>

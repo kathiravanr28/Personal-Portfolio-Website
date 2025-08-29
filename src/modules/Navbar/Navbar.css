@@ -46,6 +46,7 @@ nav ul li a:hover::after{
     font-family: monospace;
 }
 
+
 .logo {
   width: 140px;
 }
@@ -137,7 +138,8 @@ nav ul li a:hover::after{
 nav .fa-solid{
   display: none;
 }
-/* Small phones */
+
+/* Smart phones */
 /* Mobile */
 
 @media (min-width: 320px) and (max-width: 480px) {
