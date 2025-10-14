@@ -122,7 +122,7 @@ export default function Projects({ active }) {
                    The project includes animations, tooltips, charts, and user-triggered interactions to enhance data exploration.
                    Designed with a responsive layout for seamless viewing across devices, focusing on data visualization, usability, and smooth user experience.</p>
                 <div className="project-buttons">
-                  <a href="infographics-doc.pdf" target="_blank" className="btn">View Document</a>
+                  <a href="/Interactive Infographic Project.pdf" target="_blank" className="btn">View Document</a>
                   {/* <a href="https://youtu.be/demo5" target="_blank" className="btn">Watch Demo</a> in future */}
                 </div>
               </div>
@@ -141,7 +141,7 @@ export default function Projects({ active }) {
                    The application allows users to add, edit, delete, and mark tasks as complete, with data stored in local storage for persistence.
                    Designed with a responsive interface, input validation, and smooth user interactions, ensuring usability across devices.</p>
                 <div className="project-buttons">
-                  <a href="todo-doc.pdf" target="_blank" className="btn">View Document</a>
+                  <a href="/To-Do-List_Project_Report.pdf" target="_blank" className="btn">View Document</a>
                   {/* <a href="https://youtu.be/demo6" target="_blank" className="btn">Watch Demo</a> in future */}
                 </div>
               </div>
