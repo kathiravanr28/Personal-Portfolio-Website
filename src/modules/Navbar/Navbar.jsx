@@ -1,5 +1,7 @@
 import "./Navbar.css";
 import { useHeaderText } from "./Navbar-function";
+import MyName from "../../assets/myname.jpeg";
+import ProfilePic from "../../assets/profile-pic.jpg";
 export default function Navbar({ scrollToSection, refs , activeSection }) {
   // used for the side menu
   const { aboutRef, projectsRef, certificatesRef, contactRef } = refs;
@@ -10,7 +12,7 @@ export default function Navbar({ scrollToSection, refs , activeSection }) {
       <div className="container">
         <nav>
           {/* my name pic */}
-          <img src="src/assets/myname.jpeg" className="logo" />
+          <img src={MyName} className="logo" />
           {/* the side menu use for navigation of different sections */}
           <ul id="sidemenu" className={`${isOpen ? "open" : ""}`}>
             {/* use onClick to navigate */}
@@ -38,7 +40,7 @@ export default function Navbar({ scrollToSection, refs , activeSection }) {
             <p className="typing typing-2">Software Engineer</p>
           </div>
           {/* Profile Picture */}
-          <img src="src/assets/profile-pic.jpg" className="profile-pic" />
+          <img src={ProfilePic} className="profile-pic" />
         </div>
       </div>
     </div>
