@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import "./BackToTop.css";
+import "./BacktoTop.css";
 
-export default function BackToTop() {
+export default function BacktoTop() {
   const [visible, setVisible] = useState(false);
 
   // Show the button only after scrolling down
