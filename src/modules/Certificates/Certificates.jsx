@@ -27,7 +27,7 @@ export default function Certificates({active}) {
                 <h3>FullStack Web development Intern</h3>
                 <p>You can see the Completion certification by clicking the link below</p>
                 {/* Certificate 2 link */}
-                <a href=""><i className="fa-solid fa-up-right-from-square"></i></a>
+                <a href="/Certificate.pdf"><i className="fa-solid fa-up-right-from-square"></i></a>
               </div>
           </div>
         </div>
